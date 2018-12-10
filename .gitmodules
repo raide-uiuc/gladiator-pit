@@ -7,3 +7,6 @@
 [submodule "ardupilot-gazebo"]
 	path = ardupilot-gazebo
 	url = git@bitbucket.org:darpactf/ardupilot-gazebo.git
+[submodule "ctf-public"]
+	path = ctf-public
+	url = git@bitbucket.org:darpactf/ctf-public.git
