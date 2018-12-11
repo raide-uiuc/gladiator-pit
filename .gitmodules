@@ -1,11 +1,11 @@
 [submodule "terrasentia-gazebo"]
-	path = terrasentia-gazebo
+	path = ros-packages/terrasentia-gazebo
 	url = git@bitbucket.org:daslab_uiuc/terrasentia-gazebo.git
 [submodule "ardupilot"]
 	path = ardupilot
 	url = https://github.com/ArduPilot/ardupilot.git
 [submodule "ardupilot-gazebo"]
-	path = ardupilot-gazebo
+	path = ros-packages/ardupilot-gazebo
 	url = git@bitbucket.org:darpactf/ardupilot-gazebo.git
 [submodule "ctf-public"]
 	path = ctf-public
