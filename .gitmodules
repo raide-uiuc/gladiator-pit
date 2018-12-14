@@ -10,3 +10,6 @@
 [submodule "ctf-public"]
 	path = ctf-public
 	url = git@bitbucket.org:darpactf/ctf-public.git
+[submodule "terra-simulator"]
+	path = terra-simulator
+	url = https://bitbucket.org/daslab_uiuc/terra-simulator
