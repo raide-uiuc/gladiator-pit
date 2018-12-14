@@ -7,9 +7,6 @@
 [submodule "ardupilot-gazebo"]
 	path = ros-packages/src/ardupilot-gazebo
 	url = git@bitbucket.org:darpactf/ardupilot-gazebo.git
-[submodule "ctf-public"]
-	path = ctf-public
-	url = https://github.com/Hlwy/ctf_public.git
 [submodule "terra-simulator"]
 	path = terra-simulator
 	url = https://bitbucket.org/daslab_uiuc/terra-simulator
