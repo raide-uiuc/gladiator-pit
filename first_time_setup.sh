@@ -3,21 +3,10 @@
 ############################
 #  Clone Repo
 ############################
-read -n1 -p "Do you need to get the gladiator-pit repo? Enter (y) or (n)" doit
+
+echo "What is the path to the gladiator-pit repo?"
+read gladiator_pit_path
 echo
-if [[ $doit == "Y" || $doit == "y" ]]; then
-     echo Please type in your bitbucket username.
-     read username
-     cd $HOME
-     git clone https://$username@bitbucket.org/darpactf/gladiator-pit.git
-     gladiator_pit_path="$HOME/gladiator-pit"
-     cd "$gladiator_pit_path"
-     git submodule init
-     git submodule update
-else
-     echo "What is the path to the gladiator-pit repo?"
-     read gladiator_pit_path
-fi
 ros_ws="$gladiator_pit_path/ros-packages"
 terra_gazebo_path="$ros_ws/src/terrasentia-gazebo"
 echo
@@ -67,6 +56,9 @@ if [[ $doit == "Y" || $doit == "y" ]]; then
      # Drivers for robot navigation
      sudo apt install ros-kinetic-gmapping ros-kinetic-amcl ros-kinetic-move-base ros-kinetic-map-server ros-kinetic-hector-gazebo*
 
+     # install armadillo
+     sudo apt-get install libarmadillo6 libarmadillo-dev
+
 fi
 
 #################################################
@@ -87,7 +79,7 @@ if [[ $doit == "Y" || $doit == "y" ]]; then
   echo 'export GAZEBO_MODEL_PATH="${GAZEBO_MODEL_PATH}${gladiator_pit_path}/ros-packages/src/ardupilot_gazebo/gazebo_models"' >> ~/.bashrc
   source ~/.bashrc
 
-  sudo cp -a ardupilot_gazebo/gazebo_worlds/. /usr/share/gazebo-7/worlds
+  sudo cp -a $gladiator_pit_path/ros-packages/src/ardupilot-gazebo/gazebo_worlds/. /usr/share/gazebo-7/worlds
 
 fi
 
@@ -102,18 +94,6 @@ if [[ $doit == "Y" || $doit == "y" ]]; then
      catkin_make
      source devel/setup.bash
 fi
-
-###########################
-#  	Build ArduCopter
-###########################
-# echo
-# read -n1 -p "Do you want to build the ArduCopter binary for SITL simulation? Enter (y) or (n)" doit
-#
-# if [[ $doit == "Y" || $doit == "y" ]]; then
-#      cd $gladiator_pit_path
-#      echo
-#      echo "ArduCopter build not yet implemented"
-# fi
 
 
 echo
