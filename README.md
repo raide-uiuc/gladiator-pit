@@ -1,6 +1,13 @@
 # Gladiator Pit
 This repository holds all of the code required to run the live DARPA capture the flag demo
 
+```
+git clone https://yourusername@bitbucket.org/darpactf/gladiator-pit.git
+cd gladiator-pit
+git submodule init
+git submodule update
+```
+
 ## ardupilot
 This repo contains the drone autopilot firmware. We're using the v3.6.3 (stable) release.
 
