@@ -1,12 +1,15 @@
 # Gladiator Pit
-This repository holds all of the code required to run the live DARPA capture the flag demo
+This repository holds all of the code required to run the live DARPA capture the flag demo.
 
+First, clone the repo:
 ```
 git clone https://yourusername@bitbucket.org/darpactf/gladiator-pit.git
 cd gladiator-pit
 git submodule init
 git submodule update
 ```
+
+Then run the script "first_time_setup.sh". You will also need to follow the README for each repo to build the ROS packages and Ardupilot firmware.
 
 ## ardupilot
 This repo contains the drone autopilot firmware. We're using the v3.6.3 (stable) release.
