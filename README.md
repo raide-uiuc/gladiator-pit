@@ -5,8 +5,7 @@ First, clone the repo:
 ```
 git clone https://yourusername@bitbucket.org/darpactf/gladiator-pit.git
 cd gladiator-pit
-git submodule init
-git submodule update
+git submodule update --init --recursive
 ```
 
 Then run the script "first_time_setup.sh". You will also need to follow the README for each repo to build the ROS packages and Ardupilot firmware.
