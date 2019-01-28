@@ -3,7 +3,7 @@ This repository holds all of the code required to run the live DARPA capture the
 
 First, clone the repo:
 ```
-git clone https://yourusername@bitbucket.org/darpactf/gladiator-pit.git
+git clone https://github.com/raide-uiuc/gladiator-pit.git
 cd gladiator-pit
 git submodule update --init --recursive
 ```
